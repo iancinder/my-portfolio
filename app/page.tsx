@@ -57,20 +57,24 @@ export default function Home() {
           {/* This wrapper controls how far down the card sits */}
           <div className="mt-40 md:mt-56">
             <ProfileCard
-              name="Ian Sendelbach"
-              title="Electrical Engineering"
-              handle="iansendelbach"
-              status="Open to internships"
-              contactText="Contact Me"
-              avatarUrl="/headshot223.png"
-              miniAvatarUrl="/headshot223.png"
-              showUserInfo={true}
-              enableTilt={true}
-              enableMobileTilt={false}
-              onContactClick={() => {
-                window.location.href = "mailto:iansendelbach@ou.edu";
-              }}
-            />
+  name="Ian Sendelbach"
+  title="Electrical Engineering"
+  handle="iansendelbach"
+  status="Open to internships"
+  contactText="Contact Me"
+  avatarUrl="/headshot223.png"
+  miniAvatarUrl="/headshot223.png"
+  showUserInfo={true}
+  enableTilt={true}
+  enableMobileTilt={false}
+  innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
+  behindGlowColor="rgba(125, 190, 255, 0.67)"
+  behindGlowSize="50%"
+  onContactClick={() => {
+    window.location.href = "mailto:iansendelbach@ou.edu";
+  }}
+/>
+
           </div>
         </section>
 
