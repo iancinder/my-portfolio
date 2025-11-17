@@ -46,13 +46,20 @@ void main() {
 }
 `;
 
-Math.map = function (n, start, stop, start2, stop2) {
+const mapRange = (
+  n: number,
+  start: number,
+  stop: number,
+  start2: number,
+  stop2: number
+) => {
   return ((n - start) / (stop - start)) * (stop2 - start2) + start2;
 };
 
 const PX_RATIO = typeof window !== 'undefined'
   ? Math.min(window.devicePixelRatio || 1, 1.5)
   : 1;
+
 
 class AsciiFilter {
   constructor(renderer, { fontSize, fontFamily, charset, invert } = {}) {
@@ -354,8 +361,9 @@ class CanvAscii {
   }
 
   updateRotation() {
-    const x = Math.map(this.mouse.y, 0, this.height, 0.5, -0.5);
-    const y = Math.map(this.mouse.x, 0, this.width, -0.5, 0.5);
+    const x = mapRange(this.mouse.y, 0, this.height, 0.5, -0.5);
+    const y = mapRange(this.mouse.x, 0, this.width, -0.5, 0.5);
+
 
     this.mesh.rotation.x += (x - this.mesh.rotation.x) * 0.05;
     this.mesh.rotation.y += (y - this.mesh.rotation.y) * 0.05;
