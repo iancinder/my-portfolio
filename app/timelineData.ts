@@ -1,6 +1,6 @@
 export const timelineItems = [
   {
-    date: "FALL 2024",
+    date: "FALL 2025",
     title: "Started Electrical Engineering @ OU",
     tag: "Education",
     description: "Joined IEEE, ESO, and started competing in robotics.",
